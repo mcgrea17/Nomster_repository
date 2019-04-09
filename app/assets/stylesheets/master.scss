@@ -17,9 +17,19 @@ h1, h2, h3, h4, h5, h6 {
   padding:0;
 }
 
+
+.navbar-inverse .navbar-brand {
+  color: #23b1cf;
+  font-family: 'oswald_regularregular', sans-serif;
+   font-size:26px;
+
+
+}
+
+
 body {
   background: image_url('circuit.png');
-  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+ font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 
 }
 

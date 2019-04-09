@@ -8,3 +8,12 @@
 
   <hr />
 <% end %>
+
+
+
+<div class="apple_pagination">
+  <div class="page_info">
+    <%= page_entries_info @tasks %>
+  </div>
+  <%= will_paginate @tasks, :container => false %>
+</div>

@@ -2,8 +2,8 @@ class PlacesController < ApplicationController
 
   before_action :authenticate_user!, only: [:new, :create]
 
-  def index
-    @places = Place.all
+  def index 
+    @places = Pace.all
     @places = Place.search(params[:term], params[:page])
   end
 
@@ -17,6 +17,10 @@ class PlacesController < ApplicationController
   end
 
   def show
+    @place = Place.find(params[:id])
+  end
+
+  def edit
     @place = Place.find(params[:id])
   end
 

@@ -40,3 +40,10 @@ body {
   -webkit-box-shadow: 8px 8px 5px #888;
   box-shadow: 8px 8px 5px #888;
 }
+
+.invalid-feedback {
+  color: #ff3333;
+  background-color: #FFEEEE;
+  border-radius: 3px;
+  padding: 2px 8px 2px 8px;
+}

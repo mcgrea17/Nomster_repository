@@ -16,4 +16,6 @@ class Place < ApplicationRecord
     end
   end
   belongs_to :user
+  validates :name, presence: true
+
 end

@@ -1,4 +1,12 @@
 class Place < ApplicationRecord
+  belongs_to :user
+  geocoded_by :address
+  after_validation :geocode
+  validates :name, presence: true, length: { minimum: 4 }
+  validates :address, presence: true
+  validates :description, presence: true
+  
+
 
   def self.search(term, current_page)
     if term
@@ -15,7 +23,5 @@ class Place < ApplicationRecord
      paginate(page: page, per_page: 2).order('id DESC') 
     end
   end
-  belongs_to :user
-  validates :name, presence: true
-
+  
 end

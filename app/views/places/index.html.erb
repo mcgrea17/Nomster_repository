@@ -1,25 +1,35 @@
 
 <% @places.each do |place| %>
-  <div class="booyah-box col-10 offset-1">
-    <h1><%= link_to place.name, place_path(place) %></h1><br />
-    <i><%= place.address %></i><br /><br />
-    <p><%= place.description %></p><br />
+  <div class="booyah-box col-8 offset-2">
+    <div class="row">
+      <div class="col-5">
+        <h1><%= link_to place.name, place_path(place) %></h1>
+        <i><%= place.address %></i><br /><br />
+        <p><%= place.description %></p><br />  
 
-    <% if place.user.present? %>
-      <small><%= place.user.email %></small>
-    <% end %>
+        <% if place.user.present? %>
+          <small><%= place.user.email %></small>
+        <% end %>
 
-    <% if place.comments.present? %>
-      <div class="col-12">
-        <blockquote>
-          <% if place.comments.last.humanized_rating.present? %>
-            <b><%= place.comments.last.humanized_rating %></b> -
-          <% end %>
-          <%= place.comments.last.message %>
-          <small><%= place.comments.last.user.email %></small>
-        </blockquote>
       </div>
-    <% end %>
+      <div class="clear"></div>
+      <% if place.photos.present? %>
+        <div class="col-7">
+          <%= image_tag( place.photos.last.picture.url, :class => "style_image") %>
+        </div>
+      <% end %>
+    </div>
+     <% if place.comments.present? %>
+          <div class="col-12">
+            <blockquote>
+              <% if place.comments.last.humanized_rating.present? %>
+                <b><%= place.comments.last.humanized_rating %></b> -
+              <% end %>
+              <%= place.comments.last.message %>
+              <small><%= place.comments.last.user.email %></small>
+            </blockquote>
+          </div>
+        <% end %>
   </div>
 
   <hr />

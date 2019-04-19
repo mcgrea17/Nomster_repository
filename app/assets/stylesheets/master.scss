@@ -17,6 +17,12 @@
     clear: both;
 }
 
+.carousel-item.active, 
+.carousel-item-next, 
+.carousel-item-prev {
+  display: block;
+}
+
 .ownerbuttons{
   margin-left: 15px;
 }
@@ -27,10 +33,21 @@ hr{
 
 .style_image {
   border: 3px solid white;
-  height: 85%;
+  height: 100%;
+  width: 100%;
   -moz-box-shadow: 8px 8px 5px #888;
   -webkit-box-shadow: 8px 8px 5px #888;
   box-shadow: 8px 8px 5px #888;
+}
+
+div#imageHolder{
+  max-height: 250px;
+  max-width: 250px;
+}
+
+.carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
+  max-height: 450px;
+  width: 100%;
 }
 
 blockquote {
@@ -68,10 +85,24 @@ h1, h2, h3, h4, h5, h6 {
   color: #23b1cf;
   font-family: 'oswald_regularregular', sans-serif;
    font-size:26px;
-
+   margin-bottom: 0;
 
 }
 
+.carousel-caption {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+  text-shadow: rgba(0, 0, 0, 0.95) 2px 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.carousel {
+  box-shadow: 0px 3px 8px #2a2a2a;
+}
 
 body {
   background: image_url('circuit.png');

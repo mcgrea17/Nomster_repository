@@ -1,7 +1,7 @@
 <div class="booyah-box col-10 offset-1">
   <div class="row">
      <% @place.photos.each do |photo| %>
-      <div>
+      <div id="imageHolder">
           <%= image_tag( photo.picture.url, :class => "style_image") %><br/>
           <%= photo.caption %> 
       </div>
@@ -15,7 +15,7 @@
       <i><%= @place.address %></i>
       <br/><br/>
     </div><br/>
-    <p>"<%= @place.description %>"</p>
+    <p style="padding-left: 35px;">"<%= @place.description %>"</p>
     <br/>    
   </div>
 

@@ -52,6 +52,7 @@
       <% if place.photos.present? %>
         <div class="imageHolder col-sm-7" >
           <%= image_tag( place.photos.last.picture.url, :class => "style_image") %>
+           <%= place.photos.last.caption %> 
         </div>
       <% end %>
     </div>
@@ -60,6 +61,7 @@
             <blockquote>
               <% if place.comments.last.humanized_rating.present? %>
                 <b><%= place.comments.last.humanized_rating %></b> -
+                
               <% end %>
               <%= place.comments.last.message %>
               <small><%= place.comments.last.user.email %></small>

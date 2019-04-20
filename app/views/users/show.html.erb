@@ -1,1 +1,38 @@
-<h1>User Dashboard</h1>
+<div class="booyah-box">
+  <div class="row">
+    <div class="col-4">
+
+
+      <%= image_tag 'users.png' %>
+
+      <h1><%= @user.email %></h1>
+      <h3>Member Since: <%= @user.created_at.strftime("%B %d %Y") %></h3>
+      <h4><%= @user.comments.count %> total comments</h4>
+      <h4><%= @user.comments.where(rating: '5_stars').count %> total 5 star reviews</h4>
+    </div>
+  </div>
+  <div class="clear"></div>
+
+</div>
+<br /><br />
+<h1 class="text-center">My Comments</h1>
+<br /><br />
+<div class="row">
+  <% place_id = -1, new_place_id= -2 %>
+  <% @user.comments.order(:place_id).each do |comment| %>
+    <% new_place_id = comment.place_id %>
+    <div class="col-12 col-sm-6">
+       <% if (new_place_id != place_id) %>
+          <h2 class="text-center"><%= link_to comment.place.name, place_path(comment.place) %></h2>
+       <% end %>
+       <% place_id = new_place_id %>  
+      <blockquote>
+        <% if comment.humanized_rating.present? %>
+          <b><%= comment.humanized_rating %></b> -
+        <% end %>
+        <%= comment.message %>
+        <small><%= comment.user.email %></small>
+      </blockquote>
+    </div>
+  <% end %>
+</div>

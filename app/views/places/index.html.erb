@@ -50,7 +50,7 @@
       </div>
       <div class="clear"></div>
       <% if place.photos.present? %>
-        <div class="imageHolder col-7" >
+        <div class="imageHolder col-sm-7" >
           <%= image_tag( place.photos.last.picture.url, :class => "style_image") %>
         </div>
       <% end %>

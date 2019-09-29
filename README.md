@@ -1,24 +1,9 @@
-# README
+# Nomster
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This an app for users to enter restaurants they would like to review.  Users are able to write a review, enter the location and add pictures.  Users are able to comment and rate places that other users have loaded.  To enter places or comments you must first create an application user.
 
-Things you may want to cover:
+Wen you click on a particular place it will bring you to a page about the restaurant, which may include more pictures, a map of the location of the restaurant and any comments.
 
-* Ruby version
+To view the app:  https://nomster-amber-mcgregor.herokuapp.com/
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![nomster](https://user-images.githubusercontent.com/34463810/65834155-11e50a80-e28d-11e9-8c8d-286779e8d98d.png)
